@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Book Store App</string>
+
+    <string name="titleEditActivity">Add a book</string>
+
+    <string name="welcome">Welcome in Bookstore!</string>
+    <string name="add_example_data">Add example data</string>
+</resources>

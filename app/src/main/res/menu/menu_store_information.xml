@@ -9,4 +9,8 @@
         android:title="@string/add_example_data"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_delete_all_entries"
+        android:title="@string/action_delete_all_entries"
+        app:showAsAction="never" />
 </menu>

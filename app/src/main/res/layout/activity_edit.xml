@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
     tools:context=".EditActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryAndQuantityStyle"
+            android:text="@string/overview_category" />
+
+        <LinearLayout style="@style/LineStyle">
+
+            <EditText
+                android:id="@+id/edit_book_name"
+                style="@style/EditorStyle"
+                android:hint="@string/type_book_name"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/edit_book_price"
+                style="@style/EditorStyle"
+                android:hint="@string/type_book_price"
+                android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryAndQuantityStyle"
+            android:text="@string/quantity_category" />
+
+        <LinearLayout style="@style/LineQuantityStyle">
+
+            <Button
+                android:id="@+id/decrease_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_decrease_text" />
+
+            <EditText
+                android:id="@+id/edit_quantity_of_book"
+                style="@style/EditorQuantityEditStyle"
+                android:hint="@string/type_book_quantity"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/increase_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_increase_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_supplier_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryAndQuantityStyle"
+            android:text="@string/category_supplier_name" />
+
+        <LinearLayout style="@style/LineStyle">
+
+            <Spinner
+                android:id="@+id/edit_spinner_supplier_name"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_supplier_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryAndQuantityStyle"
+            android:text="@string/supplier_phone_number_category" />
+
+        <LinearLayout style="@style/LineStyle">
+            <EditText
+                android:id="@+id/edit_supplier_phone_number"
+                style="@style/EditorStyle"
+                android:hint="@string/type_supplier_phone_number"
+                android:inputType="phone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/call_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/button_call_text"
+        android:textAllCaps="true" />
+
+</LinearLayout>

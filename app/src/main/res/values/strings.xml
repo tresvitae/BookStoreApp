@@ -2,7 +2,58 @@
     <string name="app_name">Book Store App</string>
 
     <string name="titleEditActivity">Add a book</string>
-
     <string name="welcome">Welcome in Bookstore!</string>
+
     <string name="add_example_data">Add example data</string>
+    <string name="action_delete_all_entries">Delete all books</string>
+
+    <string name="overview_category">Overview</string>
+
+    <string name="type_book_name">Product Name</string>
+    <string name="type_book_price">Price</string>
+    <string name="type_book_quantity">0</string>
+    <string name="type_supplier_phone_number">Phone Number</string>
+
+    <string name="quantity_category">Quantity</string>
+    <string name="supplier_information_category">Supplier Information</string>
+    <string name="supplier_phone_number_category">Supplier Phone Number</string>
+    <string name="category_supplier_name">Supplier Name</string>
+
+    <string name="unknown_supplier">Unknown</string>
+    <string name="dhl_supplier">DHL</string>
+    <string name="ups_supplier">UPS</string>
+    <string name="royal_supplier">ROYAL OFFICE</string>
+
+    <string name="editor_insert_book_successful">Book saved successful</string>
+    <string name="editor_insert_book_failed">Failed attempt insert new book</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="quantity_example">9</string>
+    <string name="dollar_symbol">$</string>
+    <string name="empty_view_title_text">Inventory is empty.</string>
+
+    <string name="edit_activity_see_details">See Product Details</string>
+    <string name="edit_activity_edit_details">Edit Product Details</string>
+
+    <string name="editor_update_book_failed">Book hasn\'t been updated due to error</string>
+    <string name="editor_update_book_successful">Book updated</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep editing</string>
+
+    <string name="delete_dialog_msg">If delete this book?</string>
+    <string name="yes">Yes, delete it</string>
+    <string name="no">No, don\'t delete it</string>
+    <string name="editor_delete_book_successful">Book deleted</string>
+    <string name="editor_delete_book_failed">Error with deleting the book</string>
+
+    <string name="illigal_quantity_msg">Cannot set lower then 0</string>
+
+    <string name="sale_button">Sale</string>
+    <string name="button_increase_text">+</string>
+    <string name="button_decrease_text">-</string>
+    <string name="button_call_text">Call</string>
+
 </resources>

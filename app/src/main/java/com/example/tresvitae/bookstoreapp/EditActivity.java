@@ -10,9 +10,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
@@ -27,7 +25,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -155,7 +152,7 @@ public class EditActivity extends AppCompatActivity implements LoaderManager.Loa
         });
     }
 
-    // Call to the supplier to order the product.
+    //     Call to the supplier to order the product.
     private void callButton() {
         fieldCallButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,8 +161,11 @@ public class EditActivity extends AppCompatActivity implements LoaderManager.Loa
                 // Here, thisActivity is the current activity
                 if (!TextUtils.isEmpty(supplierPhoneNumberString)) {
                     if (checkPermission(Manifest.permission.CALL_PHONE)) {
-                        String dial = "phone no: " + supplierPhoneNumberString;
-                        startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                        intent.setData(Uri.parse("tel:" + supplierPhoneNumberString));
+                        if (intent.resolveActivity(getPackageManager()) != null) {
+                            startActivity(intent);
+                        }
                     } else {
                         Toast.makeText(EditActivity.this, "Permission Call Phone denied", Toast.LENGTH_SHORT).show();
                     }
@@ -185,7 +185,6 @@ public class EditActivity extends AppCompatActivity implements LoaderManager.Loa
     private boolean checkPermission(String permission) {
         return ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED;
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -255,6 +254,14 @@ public class EditActivity extends AppCompatActivity implements LoaderManager.Loa
                 TextUtils.isEmpty(quantityString) && TextUtils.isEmpty(supplierPhoneNumberString)
                 && fieldSupplierName == BookContract.BookEntry.TYPE_UNKNOWN) {
             // Since no fields were modified, we can return early without creating a new book.
+            return;
+        }
+
+        // Pop up toast message if any of EditText is not filled.
+        if (TextUtils.isEmpty(productNameString) || TextUtils.isEmpty(priceString)
+                || TextUtils.isEmpty(quantityString) || TextUtils.isEmpty(supplierPhoneNumberString)) {
+            Toast.makeText(this, getString(R.string.fill_in_all_in_book_failed),
+                    Toast.LENGTH_LONG).show();
             return;
         }
 

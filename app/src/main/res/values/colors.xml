@@ -6,4 +6,9 @@
 
     <color name="minus_button">#7B68EE</color>
     <color name="plus_button">#B22222</color>
+
+    <color name="product_name_color">#0a2f50</color>
+    <color name="price_color">#4aa4f2</color>
+    <color name="dollar_symbol_color">#4aa4f2</color>
+
 </resources>

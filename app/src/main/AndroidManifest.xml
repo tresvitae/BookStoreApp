@@ -23,7 +23,8 @@
         <activity
             android:name=".EditActivity"
             android:parentActivityName=".StoreInformationActivity"
-            android:theme="@style/EditTheme"></activity>
+            android:theme="@style/EditTheme">
+        </activity>
 
         <provider
             android:name=".data.BookProvider"

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
@@ -8,43 +7,37 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_weight="2.5"
         android:layout_height="wrap_content"
+        android:layout_weight="2.5"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/product_name"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fontFamily="sans-serif-medium"
-        android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="#0a2f50"  />
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/product_name_color" />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_weight="2"
             android:layout_height="0dp"
+            android:layout_weight="2"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textAppearance="?android:textAppearanceListItemSmall"
-                android:textColor="#4aa4f2"  />
+                style="@style/PriceAndDollarStyle"
+                android:textColor="@color/price_color" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textAppearance="?android:textAppearanceListItemSmall"
+                style="@style/PriceAndDollarStyle"
+                android:layout_marginStart="@dimen/list_narrow_margin"
                 android:text="@string/dollar_symbol"
-                android:textColor="#4aa4f2"
-                android:layout_marginStart="4dp"/>
-        </LinearLayout>
+                android:textColor="@color/dollar_symbol_color" />
 
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -58,17 +51,17 @@
             android:id="@+id/quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/quantity_example"
-            android:padding="@dimen/list_margin"/>
+            android:padding="@dimen/list_margin"
+            android:text="@string/quantity_example" />
 
         <Button
-            android:focusable="false"
             android:id="@+id/sale_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/list_narrow_margin"
+            android:focusable="false"
             android:text="@string/sale_button"
-            android:layout_marginEnd="4dp"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true" />
 
     </LinearLayout>
 </LinearLayout>

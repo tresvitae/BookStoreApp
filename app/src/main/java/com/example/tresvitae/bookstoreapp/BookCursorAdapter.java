@@ -1,3 +1,4 @@
+
 package com.example.tresvitae.bookstoreapp;
 
 import android.content.ContentUris;
@@ -11,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.tresvitae.bookstoreapp.data.BookContract;
 
@@ -51,7 +51,6 @@ public class BookCursorAdapter extends CursorAdapter {
             saleButton.setEnabled(false);
         } else {
             saleButton.setEnabled(true);
-
         }
 
         productNameTextView.setText(bookFullName);

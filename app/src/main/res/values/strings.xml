@@ -31,7 +31,9 @@
     <string name="action_delete">Delete</string>
     <string name="quantity_example">9</string>
     <string name="dollar_symbol">$</string>
+
     <string name="empty_view_title_text">Inventory is empty.</string>
+    <string name="empty_view_subtitle_text">Please insert new book or click on Add example data button.</string>
 
     <string name="edit_activity_see_details">See Product Details</string>
     <string name="edit_activity_edit_details">Edit Product Details</string>
@@ -55,5 +57,6 @@
     <string name="button_increase_text">+</string>
     <string name="button_decrease_text">-</string>
     <string name="button_call_text">Call</string>
+    <string name="fill_in_all_in_book_failed">Insert failed. Please fill in all spaces.</string>
 
 </resources>

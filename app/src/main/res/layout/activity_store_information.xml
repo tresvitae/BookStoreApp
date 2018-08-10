@@ -27,12 +27,19 @@
             android:id="@+id/empty_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/empty_bookdata"
+            android:layout_alignBottom="@id/empty_bookdata"
             android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-medium"
-            android:paddingTop="16dp"
             android:text="@string/empty_view_title_text"
             android:textAppearance="?android:textAppearanceSmallPopupMenu"/>
+
+        <TextView
+            android:id="@+id/empty_subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/empty_title_text"
+            android:fontFamily="sans-serif-medium"
+            android:layout_centerHorizontal="true"
+            android:text="@string/empty_view_subtitle_text"/>
 
     </RelativeLayout>
 

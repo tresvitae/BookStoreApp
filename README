@@ -15,10 +15,17 @@ The App includes:
 - Updating information based on user input
 - Creating intents to other apps using stored information
     
-The application implements ContentProvider on an SQLite database, performing the operations called CRUD: CREATE, READ, UPDATE and DELETE.
+The application implements ContentProvider on an SQLite database, 
+performing the operations called CRUD: CREATE, READ, UPDATE and DELETE.
 
-It uses a CursorAdapter to created a listView in the main activity. Clicking on the FAB button will bring you to the insert screen with empty fields. Clicking on an particular item in the listView will bring you to a particular product with updated data from SQLite. Also, in the listView there is a sale button that reduces the quantity by 1 when pressed and set to off when the value is equal to 0.
+It uses a CursorAdapter to created a listView in the main activity. Clicking on the FAB 
+button will bring you to the insert screen with empty fields. Clicking on an particular 
+item in the listView will bring you to a particular product with updated data from SQLite. 
+Also, in the listView there is a sale button that reduces the quantity by 1 when pressed and 
+set to off when the value is equal to 0.
 
 ListView displays information like Product Name, Price and Quantity of product from the database.
 
-In the update screen there are save and delete buttons on the action bar, increase and decrease buttons to change the total of quantity's product. Also contains order button to open the dialer phone with the phone number of the supplier.
+In the update screen there are save and delete buttons on the action bar, increase and decrease 
+buttons to change the total of quantity's product. Also contains order button to open the dialer 
+phone with the phone number of the supplier.
